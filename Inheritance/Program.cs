@@ -28,12 +28,26 @@ namespace Inheritance
              *  
              * Creatively display the class member values 
              */
+            var weaver = new Bird() 
+            { HasFlight = true, SoundofChirp = "chirp chirp chirp", LengthofBeak = "relatively large", StaysWithEggs = true, Lifespan = 15, MovementSpeed = "fast", NumberofLegs= 2, Size = "small"};
+            string weaverFlightOutput = weaver.HasFlight ? "has the ability to fly" : "can not fly";
+            string weaverEggOutput = weaver.StaysWithEggs ? "is a good parent that stays with their eggs" : "left to get milk and never came back";
+            weaver.DisplayInformation(weaverFlightOutput, weaverEggOutput);
+
+
+
 
             /*Create an object of your Reptile class
              *  give values to your members using the object of your Reptile class
              *  
              * Creatively display the class member values 
              */
+            var komodoDragon = new Reptile()
+            { ColorofScales = "gray", IsLazy = true, LaysEggsInWater = false, LengthofTail = 2, Lifespan = 30, MovementSpeed = "slow", NumberofLegs = 4, Size = "large and in charge" };
+            string dragonLazyOutput = komodoDragon.IsLazy ? "is a lazy creature that wants to sun all day" : "likes to get things done.";
+            string dragonEggOutput = komodoDragon.IsLazy ? "lays their eggs in water" : "lays their eggs on land.";
+            komodoDragon.DisplayInformation(dragonLazyOutput, dragonEggOutput);
+
         }
     }
 }
